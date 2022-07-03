@@ -37,7 +37,7 @@ const diagonal2 = [$boardItem2, $boardItem4, $boardItem6]
 
 const linesToVerify = [line1, line2, line3, column1, column2, column3, diagonal1, diagonal2]
 
-const resetButton = document.querySelector('reset-button')
+const $resetButton = document.querySelector('.reset-button')
 
 let currentMove = 'X'
 let winner = ''
@@ -121,9 +121,9 @@ function printWinnerName () {
 }
 
 function resetGame(){
-  resetButton.addEventListener('click'){
-    location.reload  
-  }
+  $resetButton.addEventListener('click', function(){
+     location.reload()  
+  })
 }
 
 function printPoint() {
@@ -451,3 +451,4 @@ $boardItem8.addEventListener('click', function() {
 $switcherBot.addEventListener('click', function(){
    $switcherBot.classList.toggle('active')
 })
+resetGame()
