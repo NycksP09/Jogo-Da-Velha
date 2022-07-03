@@ -122,7 +122,7 @@ function printWinnerName () {
 
 function resetGame(){
   $resetButton.addEventListener('click', function(){
-     Location.reload()  
+     location.reload();  
   })
 }
 
