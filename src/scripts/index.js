@@ -37,6 +37,8 @@ const diagonal2 = [$boardItem2, $boardItem4, $boardItem6]
 
 const linesToVerify = [line1, line2, line3, column1, column2, column3, diagonal1, diagonal2]
 
+const resetButton = document.querySelector('reset-button')
+
 let currentMove = 'X'
 let winner = ''
 let scorePlayer1 = 0
@@ -116,6 +118,12 @@ function printWinnerName () {
   const playerValue = getPlayerName(currentMove)
 
   $winnerText.textContent = playerValue + ' Ganhou Fiot'
+}
+
+function resetGame(){
+  resetButton.addEventListener('click'){
+    location.reload  
+  }
 }
 
 function printPoint() {
